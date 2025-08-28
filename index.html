@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Mapa AR - Festa</title>
+  <script>
+    function redirect() {
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        // iOS -> abre o .usdz
+        window.location.href = "https://jhonstrabalho-max.github.io/mapa-ar/mapa.usdz";
+      } else {
+        // Android -> abre o .glb
+        window.location.href = "https://jhonstrabalho-max.github.io/mapa-ar/mapa.glb";
+      }
+    }
+  </script>
+</head>
+<body onload="redirect()" style="text-align:center; font-family:sans-serif;">
+  <h2>Carregando mapa em AR...</h2>
+  <p>Se não abrir automaticamente, clique abaixo:</p>
+  <p>
+    <a href="https://SEUNOME.github.io/mapa-ar/mapa.usdz">Abrir versão iPhone (USDZ)</a><br>
+    <a href="https://SEUNOME.github.io/mapa-ar/mapa.glb">Abrir versão Android (GLB)</a>
+  </p>
+</body>
+</html>
